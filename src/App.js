@@ -1,15 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./rubber-ducky.png";
+import "./App.css";
 
 function App() {
+  const [duckies, setDuckies] = useState(0);
+  const addDucky = () => setDuckies(duckies + 1);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <code>{duckies}</code>
+        <div onClick={addDucky}>
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
+        <p>Click the Ducky!</p>
         <a
           className="App-link"
           href="https://reactjs.org"
