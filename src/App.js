@@ -15,6 +15,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <p>Click the Ducky!</p>
+        <p onClick={() => setDuckies(0)}>Kill the duckies</p>
       </header>
     </div>
   );
